@@ -7,11 +7,15 @@ Boilerplate for web apps with React and Redux
 .
 ├── src
 │   ├── actions
-│   ├── components
-│   │   └── App.jsx
-│   ├── containers
-│   ├── reducers
 │   │   └── index.js
+│   ├── components
+│   │   ├── App.jsx
+│   │   └── FooterApp.jsx
+│   ├── containers
+│   │   └── UsersList.jsx
+│   ├── reducers
+│   │   ├── index.js
+│   │   └── initialState.js
 │   ├── store
 │   │   ├── config.dev.js
 │   │   ├── config.prod.js
@@ -25,7 +29,7 @@ Boilerplate for web apps with React and Redux
 ├── webpack.config.js
 └── webpack.config.prod.js
 
-6 directories, 13 files
+6 directories, 17 files
 ```
 
 ## Available Scripts
