@@ -40,6 +40,7 @@ module.exports = {
     inline: true,
     contentBase: dirSource,
     host: '0.0.0.0',
-    port: port
+    port: port,
+    historyApiFallback : true
   }
 }
