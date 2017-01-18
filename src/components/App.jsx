@@ -1,12 +1,15 @@
 import React, { Component } from 'react'
-import { Grid } from 'react-bootstrap'
+import UsersList from '../containers/UsersList'
+import FooterApp from './FooterApp'
 
 class App extends Component {
   render() {
     return (
-      <Grid>
-        <h1>React redux starter kit!</h1>
-      </Grid>
+      <div>
+        <h3 className="text-center">React redux starter kit!</h3>
+        <UsersList/>
+        <FooterApp/>
+      </div>
     )
   }
 }
