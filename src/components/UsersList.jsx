@@ -1,30 +1,22 @@
 import React, { Component,PropTypes } from 'react'
-import { ListGroup,ListGroupItem,Grid,Label } from 'react-bootstrap'
+import { ListGroup,Grid } from 'react-bootstrap'
+import UserItem from './UserItem'
 
 class UsersList extends Component {
   componentWillMount() {
     this.props.fetchUsers()
   }
-
-  renderUser() {
-    const { users } = this.props
-    return users.map(user => {
-      return (
-        <ListGroupItem key={user.id}>
-          <div className="pull-right"><Label bsStyle="info">{user.website}</Label></div>
-          {user.name}
-        </ListGroupItem>
-      )
-    })
-  }
   
   render() {
+    const { users } = this.props
     return (
-      <Grid>
-        <ListGroup>
-          {this.renderUser()}
-        </ListGroup>
-      </Grid>
+      <div>
+        <Grid>
+          <ListGroup>
+            {users.map(user => <UserItem key={user.id} user={user}/>)}
+          </ListGroup>
+        </Grid>
+      </div>
     )
   }
 }
