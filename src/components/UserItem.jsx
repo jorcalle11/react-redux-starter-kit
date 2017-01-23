@@ -3,7 +3,7 @@ import { ListGroupItem,Label } from 'react-bootstrap'
 
 const UserItem = ({user}) => {
   return (
-    <div className="text-center">
+    <div>
       <ListGroupItem key={user.id}>
         <div className="pull-right">
           <Label bsStyle="info">{user.website}</Label>
