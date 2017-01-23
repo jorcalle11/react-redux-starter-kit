@@ -1,7 +1,5 @@
 import React, { Component,PropTypes } from 'react'
 import { ListGroup,ListGroupItem,Grid,Label } from 'react-bootstrap'
-import { connect } from 'react-redux'
-import {fetchUsers} from '../actions/index'
 
 class UsersList extends Component {
   componentWillMount() {
@@ -36,8 +34,4 @@ UsersList.propTypes = {
   fetchUsers: PropTypes.func.isRequired
 }
 
-const mapStateToProps = ({ users }) => {
-  return { users }
-}
-
-export default connect(mapStateToProps,{ fetchUsers })(UsersList)
+export default UsersList

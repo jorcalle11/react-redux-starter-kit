@@ -1,13 +1,13 @@
 import React, { Component } from 'react'
-import UsersList from '../containers/UsersList'
 import FooterApp from './FooterApp'
+import WrapperUsersList from '../containers/WrapperUsersList'
 
 class App extends Component {
   render() {
     return (
       <div>
         <h3 className="text-center">React redux starter kit!</h3>
-        <UsersList/>
+        <WrapperUsersList/>
         <FooterApp/>
       </div>
     )
