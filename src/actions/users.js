@@ -2,13 +2,28 @@ import axios from 'axios'
 import {
   API_URL,
   ADD_USER,
-  FETCH_USERS
+  FETCH_USERS_REQUEST,
+  FETCH_USERS_SUCCESS,
+  FETCH_USERS_FAILURE
 } from '../constants'
 
-const requestUsers = data => {
+const fetchUsersRequest = () => {
   return {
-    type: FETCH_USERS,
+    type: FETCH_USERS_REQUEST
+  }
+}
+
+const fetchUsersSuccess = data => {
+  return {
+    type: FETCH_USERS_SUCCESS,
     payload: data
+  }
+}
+
+const fetchUsersFailure = err => {
+  return {
+    type: FETCH_USERS_FAILURE,
+    err
   }
 }
 
@@ -23,6 +38,9 @@ export const fetchUsers = () => {
   const request = axios.get(`${API_URL}/users`)
 
   return dispath => {
-    request.then(({ data }) => dispath(requestUsers(data)))
+    dispath(fetchUsersRequest())
+    return request
+      .then(({ data }) => dispath(fetchUsersSuccess(data)))
+      .catch(err => dispath(fetchUsersFailure(err)))
   }
 }
