@@ -1,8 +1,8 @@
 import { describe,it } from 'mocha'
 import { expect } from 'chai'
 import { createStore } from 'redux'
-import rootReducer from '../reducers/index'
-import { addUser } from '../actions/users'
+import rootReducer from '../reducer'
+import { addUser } from '../user/userActions'
 
 describe('Store', () => {
   it('should handle creating user', () => {

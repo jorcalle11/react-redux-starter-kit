@@ -1,8 +1,10 @@
 import React, { Component,PropTypes } from 'react'
+import { connect } from 'react-redux'
 import { ListGroup,Grid } from 'react-bootstrap'
-import UserItem from './UserItem'
+import UserItem from '../userItem/userItem'
+import { fetchUsers } from '../userActions'
 
-class UsersList extends Component {
+export class UsersList extends Component {
   componentWillMount() {
     this.props.fetchUsers()
   }
@@ -26,4 +28,8 @@ UsersList.propTypes = {
   fetchUsers: PropTypes.func.isRequired
 }
 
-export default UsersList
+const mapStateToProps = ({ users }) => {
+  return { users }
+}
+
+export default connect(mapStateToProps,{ fetchUsers })(UsersList)

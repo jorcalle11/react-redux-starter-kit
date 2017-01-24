@@ -1,11 +1,8 @@
-
 import { createStore } from 'redux'
-import reducer from '../reducers'
-import initialState from '../reducers/initialState'
+import rootReducer from '../reducer'
 
 const configProd = createStore(
-  reducer,
-  initialState
+  rootReducer
 )
 
 export default configProd

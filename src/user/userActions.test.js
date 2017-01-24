@@ -2,12 +2,12 @@ import { describe,it } from 'mocha'
 import { expect } from 'chai'
 import thunk from 'redux-thunk'
 import configMockStore from 'redux-mock-store'
-import { addUser,fetchUsers } from './users'
+import { addUser,fetchUsers } from './userActions'
 import {
   ADD_USER,
   FETCH_USERS_REQUEST,
   FETCH_USERS_SUCCESS
-} from '../constants'
+} from './userTypeActions'
 
 describe('Users actions creators', () => {
   it('should create a "ADD_USER" action', () => {

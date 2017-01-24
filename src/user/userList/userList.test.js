@@ -3,7 +3,7 @@ import { describe,it } from 'mocha'
 import sinon from 'sinon'
 import { mount } from 'enzyme'
 import { expect } from 'chai'
-import UsersList from './UsersList'
+import { UsersList } from './userList'
 
 const config = () => {
   let props = {

@@ -2,7 +2,7 @@ import React from 'react'
 import { describe,it } from 'mocha'
 import { mount } from 'enzyme'
 import { expect } from 'chai'
-import UserItem from './UserItem'
+import UserItem from './userItem'
 
 const config = () => {
   let props = {

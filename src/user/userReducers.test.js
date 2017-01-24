@@ -1,7 +1,7 @@
 import { describe,it } from 'mocha'
 import { expect } from 'chai'
-import userReducer from './users'
-import { addUser } from '../actions/users.js'
+import userReducer from './userReducers'
+import { addUser } from './userActions'
 
 const config = () => {
   const initialState = [

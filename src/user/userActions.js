@@ -1,11 +1,11 @@
 import axios from 'axios'
-import {
-  API_URL,
+import { API_URL } from '../constants'
+import {  
   ADD_USER,
   FETCH_USERS_REQUEST,
   FETCH_USERS_SUCCESS,
   FETCH_USERS_FAILURE
-} from '../constants'
+} from './userTypeActions.js'
 
 const fetchUsersRequest = () => {
   return {
