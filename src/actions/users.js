@@ -1,12 +1,21 @@
 import axios from 'axios'
-export const FETCH_USERS = 'FETCH_USERS'
-
-const API_URL = 'http://jsonplaceholder.typicode.com'
+import {
+  API_URL,
+  ADD_USER,
+  FETCH_USERS
+} from '../constants'
 
 const requestUsers = data => {
   return {
     type: FETCH_USERS,
     payload: data
+  }
+}
+
+export const addUser = newUser => {
+  return {
+    type: ADD_USER,
+    payload: newUser
   }
 }
 
