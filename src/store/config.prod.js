@@ -1,11 +1,11 @@
 
-import { createStore } from 'redux'
+import { createStore,applyMiddleware } from 'redux'
 import reducer from '../reducers'
-import initialState from '../reducers/initialState'
+import thunk from 'redux-thunk'
 
 const configProd = createStore(
   reducer,
-  initialState
+  applyMiddleware(thunk)
 )
 
 export default configProd
